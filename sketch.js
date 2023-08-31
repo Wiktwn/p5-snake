@@ -6,7 +6,7 @@ function setup() {
   stroke("black")
   strokeWeight(1);
   fill("lime");
-  snake = new Snake(createVector(20, 20), createVector(1,0), 10, 5);
+  snake = new Snake(createVector(20, 20), createVector(1,0), 10, 0);
   apple = createVector(int(random(0, width/snake.size))*10, int(random(0, height/snake.size))*10);
   frameRate(10);
 }
