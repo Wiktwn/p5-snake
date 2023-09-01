@@ -1,7 +1,10 @@
 html, body {
-  margin: 0;
+  background-color: #111111;
+  margin: 10;
   padding: 0;
 }
 canvas {
+  margin: 50vw;
   display: block;
+  border: groove black;
 }

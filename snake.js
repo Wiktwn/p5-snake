@@ -13,8 +13,8 @@ class Snake {
   update() {
     this.pos.add(this.dir);
     this.prevDir = this.dir;
-    if (this.pos.x >  width || this.pos.x < 0) {snake.dead = true;}
-    if (this.pos.y > height || this.pos.y < 0) {snake.dead = true;}
+    if (this.pos.x >=  width || this.pos.x <= 0) {snake.dead = true;}
+    if (this.pos.y >= height || this.pos.y <= 0) {snake.dead = true;}
     this.segments.unshift(new Segment(p5.Vector.sub(this.pos, this.dir), this.size));
     
     if (this.segments.length > this.length) {
@@ -40,7 +40,7 @@ class Snake {
   
   checkApple(applePos) {
     if (this.pos.equals(applePos)) {
-      this.length++;
+      this.length += 4;
       return true;
     } else {
       return false;
